@@ -1,0 +1,59 @@
+/**
+ * Name:Riva Kansakar Date:7th May,2023 CSC 202 Project 4--DocumentId.java
+ * 
+ * DocumentId is a this wrapper for a String to designate a type to be used in
+ * SearchEngine.java.
+ * 
+ * Document Assistance(who and describe what assistance was received; if no
+ * assistance, declare that fact): No assistance received
+ */
+
+public class DocumentId {
+
+	private final String id;
+	
+	/**
+	 * Constructs a DocumentId object initializing the 
+	 * data field to the parameter value.
+	 * @param id to initialize 
+	 */
+
+	public DocumentId(String id) {
+		this.id = id;
+	}
+	
+	/*
+	 * Returns id of document
+	 */
+
+	public String getDocumentId() {
+		return id;
+	}
+
+	@Override
+
+	public int hashCode() {
+		return id.hashCode();
+	}
+	
+	@Override
+
+	public boolean equals(Object object) {
+		if (object == this) {
+			return true;
+		}
+		if (!(object instanceof DocumentId)) {
+			return false;
+		}
+
+		DocumentId other = (DocumentId) object;
+		return ((this.id).equals(other.id));
+	}
+
+	@Override
+
+	public String toString() {
+		return "DocumentId = " + id;
+	}
+
+}
